@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>IOT MINI PROJECT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:0">
+
+    <div class="w3-display-container w3-center">
+        <img src="images/home.jpg" style="width:100%; height:600px; filter: grayscale();">
+        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32" style="position:relative; bottom:600px;">
+          <h1><b>MINI PROJECT</b></h1>
+          <h3><b>Smart Blind Stick For Visually Impaired</b></h3>    
+        </div>
+      </div>
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center" style="max-width:800px" id="band">
+    <i class="fa fa-angle-double-down" aria-hidden="true" style="position: relative; bottom: 150px; font-size: 3rem;"></i>
+    <h2 class="w3-wide">INTRODUCTION</h2>
+    <p class="w3-justify" style="font-size: 1.5rem; font-style:oblique">This project presents the development of a Blind Stick/OBSTACLES Detector using Esp32 and an Ultrasonic Distance Sensor. The aim of this system is to enhance the mobility and safety of visually impaired individuals by providing real-time feedback about obstacles in their proximity.</p>
+    <h2 class="w3-wide" style="margin-top: 7rem;">COMPONENTS</h2>
+    <div>
+        <h4 style="margin-top: 5rem;">Esp32</h4>
+        <img src="images/esp32.png" alt="esp32" style="margin-top: 5px;">
+        <p style="font-size: 1.2rem;">ESP32 is a series of low-cost, low-power system on a chip microcontrollers with integrated Wi-Fi and dual-mode Bluetooth. </p>
+    </div>
+    <div>
+        <h4 style="margin-top: 5rem;">Arduino nano</h4>
+        <img src="images/nano.jpg" alt="arduino nano" style="margin-top: 5px; width:50%; height:50%">
+        <p style="font-size: 1.2rem;">The Arduino Nano is an open-source breadboard-friendly microcontroller board based on the Microchip ATmega328P microcontroller (MCU) and developed by Arduino.cc.</p>
+    </div>
+    <div>
+        <h4 style="margin-top: 5rem;">Ultrasonic Sensor</h4>
+        <img src="images/ultrasonic.jpg" alt="ultrasonic sensor" style="margin-top: 5px; width:50%; height:50%">
+        <p style="font-size: 1.2rem;">Ultrasonic sensors are common sensors to use in proximity sensing and distance measurement applications.</p>
+    </div>
+    <div>
+        <h4 style="margin-top: 5rem;">LM2596 Step Down Converter</h4>
+        <img src="images/step-down-module.jpg" alt="step down module" style="margin-top: 5px; width:50%; height:50%">
+        <p style="font-size: 1.2rem;">A buck converter or step-down converter is a DC-to-DC converter which decreases voltage, while increasing current, from its input (supply) to its output (load).</p>
+    </div>
+    <div>
+        <h4 style="margin-top: 5rem;">NEO-6M GPS module with eprom</h4>
+        <img src="images/neo-6m-gps-module.webp" alt="gps module" style="margin-top: 5px; width:50%; height:50%">
+        <p style="font-size: 1.2rem;">NEO-6M TTL GPS Module with EPROM is equipped with the latest technology from Ublox. It is done to give better positioning information and it includes a built-in 25x25mm active GPS antenna with a UART TTL socket.</p>
+    </div>
+    <div>
+        <h4 style="margin-top: 5rem;">SIM800L GPRS GSM module</h4>
+        <img src="images/SIM.jpg" alt="gsm module" style="margin-top: 5px; width:50%; height:50%">
+        <p style="font-size: 1.2rem;">SIM800L is a miniature cellular module which allows for GPRS transmission, sending and receiving SMS and making and receiving voice calls.</p>
+    </div>
+    <div>
+        <h4 style="margin-top: 5rem;">Buzzer</h4>
+        <img src="images/buzzers.webp" alt="buzzer" style="margin-top: 5px; width:50%; height:50%">
+        <p style="font-size: 1.2rem;">A buzzer or beeper is an audio signaling device, which may be mechanical, electromechanical, or piezoelectric (piezo for short).</p>
+    </div>
+    <div>
+        <h4 style="margin-top: 5rem;">Push button</h4>
+        <img src="images/push.png" alt="button" style="margin-top: 5px; width:50%; height:50%">
+        <p style="font-size: 1.2rem;">physical button or switch integrated into a device or system that enables users to initiate or trigger specific actions.</p>
+    </div>
+    
+
+    <h2 class="w3-wide" style="margin-top: 8rem;">CIRCUIT DIAGRAM</h2>
+    <img src="images/circuit.png" alt="circuit" style="position:relative; margin-top: 5rem; right: 30px;">
+    <img src="images/cird.png" alt="circuit" style="position: relative; margin-top: 5rem; right:50px">
+
+    <h2 class="w3-wide" style="margin-top: 8rem;">WORKING</h2>
+    <p style="font-size: 1.5rem; text-align: justify;">A smart blind system, employing an ultrasonic sensor and GPS technology, orchestrates automated adjustments based on location and proximity. The GPS module continuously tracks the blind's whereabouts, while the ultrasonic sensor functions as a proximity detector, identifying nearby objects or individuals. Integrated into a microcontroller, programmed algorithms process GPS coordinates, determining the blind's relative distance from a predefined location, typically the user's home. When the system detects someone within a specified range via the ultrasonic sensor, and the GPS confirms proximity to the set location, it triggers actions tailored to user preferences. For instance, upon recognizing the user's approach to the residence, the system opens the blinds, welcoming natural light. Conversely, if the user leaves or no presence is detected, the blinds automatically close, enhancing security and optimizing energy conservation.
+
+        This interconnected use of sensors and location-based data not only streamlines user comfort but also bolsters home security and energy efficiency. By adapting blind operations in response to location and presence cues, the system offers a seamless integration of technology into everyday living spaces. Moreover, this level of automation aligns with the burgeoning advancements in smart home technology, exemplifying the potential for IoT-driven solutions to harmonize with daily routines while optimizing resource utilization.</p>
+    <img src="images/snap.jpg" alt="snapshot" style="width: 50%; height: 50%;">    
+    <p style="font-size: 1.2rem;">Code: <a href="https://github.com/AmitSarto/Iot-blindstick.git" style="color: green;">Link to the code</a></p>    
+  </div>
+
+</body>
+</html>
